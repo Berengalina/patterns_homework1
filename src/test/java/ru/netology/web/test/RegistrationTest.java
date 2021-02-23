@@ -45,38 +45,38 @@ public class RegistrationTest {
 
     }
 
-//    @Test
-//    void shouldNotRegisterByPhone(){
-//        open("http://localhost:9999/");
-//        $("[data-test-id=city] input").setValue(DataHelper.generateCity());
-//        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
-//        $("[data-test-id=date] input").setValue(DataHelper.generateFirstDateOfMeeting());
-//        $("[data-test-id=name] input").setValue(DataHelper.generateByFakerName("ru"));
-//        $("[data-test-id=phone] input").setValue(DataHelper.generateByFakerDigit());
-//        $("[data-test-id=agreement]").click();
-//        $(byText("Запланировать")).click();
-//        $("[data-test-id=phone].input_invalid").shouldHave(exactText("Ошибка"));
-//    }
-//
-//    @Test
-//    void shouldRegisterWithSymbolName(){
-//        open("http://localhost:9999/");
-//        $("[data-test-id=city] input").setValue(DataHelper.generateCity());
-//        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
-//        $("[data-test-id=date] input").setValue(DataHelper.generateFirstDateOfMeeting());
-//        $("[data-test-id=name] input").setValue(DataHelper.setNameWithSymbol());
-//        $("[data-test-id=phone] input").setValue(DataHelper.generateByFakerPhone("ru"));
-//        $("[data-test-id=agreement]").click();
-//        $(byText("Запланировать")).click();
-//        $("[data-test-id=success-notification] .notification__content").shouldBe(visible, Duration.ofSeconds(5)).shouldHave(text("Встреча успешно запланирована на " + DataHelper.generateFirstDateOfMeeting()));
-//        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
-//        $("[data-test-id=date] input").setValue(DataHelper.generateSecondDateOfMeeting());
-//        $(byText("Запланировать")).click();
-//        $("[data-test-id=replan-notification] .notification__content").shouldBe(visible, Duration.ofSeconds(5)).shouldHave(text("У вас уже запланирована встреча на другую дату"));
-//        $(byText("Перепланировать")).click();
-//        $("[data-test-id=success-notification] .notification__content").shouldBe(visible, Duration.ofSeconds(5)).shouldHave(text("" + DataHelper.generateSecondDateOfMeeting()));
-//    }
-//
+    @Test
+    void shouldNotRegisterByPhone(){
+        open("http://localhost:9999/");
+        $("[data-test-id=city] input").setValue(DataHelper.generateCity());
+        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
+        $("[data-test-id=date] input").setValue(DataHelper.generateFirstDateOfMeeting());
+        $("[data-test-id=name] input").setValue(DataHelper.generateByFakerName("ru"));
+        $("[data-test-id=phone] input").setValue(DataHelper.generateByFakerDigit());
+        $("[data-test-id=agreement]").click();
+        $(byText("Запланировать")).click();
+        $("[data-test-id=phone].input_invalid").shouldHave(exactText("Ошибка"));
+    }
+
+    @Test
+    void shouldRegisterWithSymbolName(){
+        open("http://localhost:9999/");
+        $("[data-test-id=city] input").setValue(DataHelper.generateCity());
+        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
+        $("[data-test-id=date] input").setValue(DataHelper.generateFirstDateOfMeeting());
+        $("[data-test-id=name] input").setValue(DataHelper.setNameWithSymbol());
+        $("[data-test-id=phone] input").setValue(DataHelper.generateByFakerPhone("ru"));
+        $("[data-test-id=agreement]").click();
+        $(byText("Запланировать")).click();
+        $("[data-test-id=success-notification] .notification__content").shouldBe(visible, Duration.ofSeconds(5)).shouldHave(text("Встреча успешно запланирована на " + DataHelper.generateFirstDateOfMeeting()));
+        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
+        $("[data-test-id=date] input").setValue(DataHelper.generateSecondDateOfMeeting());
+        $(byText("Запланировать")).click();
+        $("[data-test-id=replan-notification] .notification__content").shouldBe(visible, Duration.ofSeconds(5)).shouldHave(text("У вас уже запланирована встреча на другую дату"));
+        $(byText("Перепланировать")).click();
+        $("[data-test-id=success-notification] .notification__content").shouldBe(visible, Duration.ofSeconds(5)).shouldHave(text("" + DataHelper.generateSecondDateOfMeeting()));
+    }
+
 
 
 }
