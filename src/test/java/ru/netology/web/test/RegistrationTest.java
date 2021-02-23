@@ -42,7 +42,6 @@ public class RegistrationTest {
         $("[data-test-id=agreement]").click();
         $(byText("Запланировать")).click();
         $("[data-test-id=name].input_invalid").shouldHave(exactText("Фамилия и имя Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-
     }
 
     @Test
