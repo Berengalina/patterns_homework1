@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/o866aaf2h2bh5tdq?svg=true)](https://ci.appveyor.com/project/Berengalina/patterns-homework1)
